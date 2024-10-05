@@ -36,16 +36,26 @@
     background-color: rgba(49, 50, 68, 0.7);
 }
 
+.navMenuOption-selected {
+    background-color: var(--primary-accent-color) !important;
+    color: var(--inner-accent) !important;
+}
+
+.refreshProgress {
+    background-color: var(--surface1) !important;
+    color: var(--primary-accent-color) !important;
+}
+
 .emby-tab-button:not(.emby-tab-button-active) {
     color: #9399b2;
 }
 
 .emby-tab-button-active {
-    color: #cdd6f4;
+    color: var(--text) !important;
 }
 
 .headerRight {
-    color: #cdd6f4;
+    color: var(--text) !important;
 }
 
 @media (hover: hover) and (pointer: fine) {
