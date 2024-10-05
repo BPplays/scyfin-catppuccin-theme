@@ -7,6 +7,8 @@
     --secondary-accent-color: #cba6f7;
     --primary-background-color: #1e1e2e;
     --secondary-background-color: #181825;
+    --surface0: #313244;
+    --surface1: #45475a;
     --primary-background-transparent: rgba(49, 50, 68, 0.5);
     --secondary-background-transparent: rgba(17, 17, 27, 0.6);
     --rounded-cards: 15px;
@@ -21,6 +23,13 @@
 
     color: #cdd6f4;
     --text: #cdd6f4;
+
+
+    --green: #a6e3a1;
+
+
+    --inner-accent: var(--surface1);
+    --played-indic: var(--green);
 }
 
 .navMenuOption:hover:not(.navMenuOption-selected) {
@@ -41,7 +50,41 @@
 
 @media (hover: hover) and (pointer: fine) {
     .paper-icon-button-light:hover:not(:disabled) {
-        color: var(--primary-background-color) !important;
+        color: var(--inner-accent) !important;
         background-color: var(--primary-accent-color) !important;
     }
 }
+
+.listItemIcon:not(.listItemIcon-transparent):not(.notification_important) {
+    color: var(--inner-accent) !important;
+    background-color: var(--primary-accent-color) !important;
+}
+
+.MuiListItemButton-root.Mui-selected {
+    background: var(--primary-background-transparent) !important;
+}
+.MuiListItemButton-root.Mui-selected .MuiListItemIcon-root,
+.MuiListItemButton-root.Mui-selected {
+    color: var(--primary-accent-color) !important;
+}
+
+
+.cardIndicators {
+    color: var(--inner-accent) !important;
+}
+
+.emby-checkbox:checked + span + .checkboxOutline,
+.selectionCommandsPanel,
+.countIndicator,
+.MuiButton-root.MuiButton-containedSizeMedium,
+.MuiChip-root.MuiChip-colorInfo:not(.MuiChip-root.MuiChip-colorError),
+progress[aria-valuenow]:before {
+    background: var(--primary-accent-color) !important;
+    color: var(--surface1) !important;
+}
+
+.playedIndicator {
+    background: var(--played-indic) !important;
+    color: var(--inner-accent)
+}
+
