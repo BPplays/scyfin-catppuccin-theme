@@ -18,10 +18,30 @@
     --primary-alt3: rgb(calc(var(--primary-r) - 30), calc(var(--primary-g) - 30), calc(var(--primary-b) - 30), 0.7);
     --primary-alt4: rgb(calc(var(--primary-r) - 30), calc(var(--primary-g) - 30), calc(var(--primary-b) - 30), 0.55);
     --primary-alt5: rgb(calc(var(--primary-r) - 30), calc(var(--primary-g) - 30), calc(var(--primary-b) - 30), 0.4);
+
+    color: #cdd6f4;
+    --text: #cdd6f4;
 }
 
 .navMenuOption:hover:not(.navMenuOption-selected) {
     background-color: rgba(49, 50, 68, 0.7);
 }
 
+.emby-tab-button:not(.emby-tab-button-active) {
+    color: #9399b2;
+}
 
+.emby-tab-button-active {
+    color: #cdd6f4;
+}
+
+.headerRight {
+    color: #cdd6f4;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .paper-icon-button-light:hover:not(:disabled) {
+        color: var(--primary-background-color) !important;
+        background-color: var(--primary-accent-color) !important;
+    }
+}
