@@ -8,8 +8,11 @@
     --primary-background-color: #1e1e2e;
     --secondary-background-color: #181825;
     --surface0: #313244;
+    --mantle-shadow: rgba(24, 24, 37, 0.35);
     --surface1: #45475a;
     --primary-background-transparent: rgba(49, 50, 68, 0.5);
+    --primary-background-transparent_lesst: rgba(49, 50, 68, 0.65);
+    --primary-background-transparent_moret: rgba(49, 50, 68, 0.4);
     --secondary-background-transparent: rgba(17, 17, 27, 0.6);
     --rounded-cards: 15px;
     --blur: 10px;
@@ -23,6 +26,7 @@
 
     color: #cdd6f4;
     --text: #cdd6f4;
+    --text-sec: rgba(186, 194, 222, 0.8); /* subtext1 half op */
 
 
     --green: #a6e3a1;
@@ -44,6 +48,15 @@
 .refreshProgress {
     background-color: var(--surface1) !important;
     color: var(--primary-accent-color) !important;
+}
+
+.collapseContent, .formDialogFooter:not(.formDialogFooter-clear), .formDialogHeader:not(.formDialogHeader-clear), .paperList, .visualCardBox {
+    background-color: var(--surface0) !important;
+}
+
+
+.visualCardBox {
+    box-shadow: 0 .0725em .29em 0 var(--mantle-shadow);
 }
 
 
@@ -70,6 +83,14 @@
     color: var(--text) !important;
 }
 
+/* progress indicator for lib scanning */
+.progressring-bg {
+    background-color: var(--primary-background-transparent_moret);
+    background-blend-mode: overlay;
+    backdrop-filter: blur(var(--blur)) !important;
+    border-color: transparent;
+}
+
 /* .MuiPaper-root.MuiDrawer-paperAnchorDockedLeft, */
 /* .MuiList-subheader .MuiListItemButton-root.MuiListItemButton-gutters:not(.Mui-selected){ */
 /*     color: var(--text) !important; */
@@ -79,6 +100,15 @@
 .MuiList-subheader .MuiListItemButton-root.MuiListItemButton-gutters:not(.Mui-selected) {
     color: var(--text) !important;
 }
+
+.MuiList-subheader .MuiListItemButton-root.MuiListItemButton-gutters:hover:not(.Mui-selected) {
+    transform: scale(1.05) !important;
+    background: var(--primary-background-color) !important;
+}
+.cardText-secondary, .fieldDescription, .guide-programNameCaret, .listItem .secondary, .nowPlayingBarSecondaryText, .programSecondaryTitle, .secondaryText {
+    color: var(--text-sec) !important;
+}
+
 
 @media (hover: hover) and (pointer: fine) {
     .paper-icon-button-light:hover:not(:disabled) {
